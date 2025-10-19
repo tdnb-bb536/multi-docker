@@ -2,12 +2,17 @@ const keys = require('./keys');
 const redis = require('redis');
 
 const redisClient = redis.createClient({
-    host: keys.redisHost,
-    port: keys.redisPort,
-    retry_strategy: () => 1000
+    socket: {
+        host: keys.redisHost,
+        port: keys.redisPort,
+        retry_strategy: () => 1000,
+    },
 });
 
 const sub = redisClient.duplicate();
+
+redisClient.connect()
+sub.connect()
 
 function fib(index) {
     if (index < 2) return 1;
@@ -15,7 +20,6 @@ function fib(index) {
 }
 
 // redisのデータが更新されたときにfibを実行する
-sub.on('message', (channel, message) => {
+sub.subscribe('insert', (message) => {
     redisClient.hset('values', message, fib(parseInt(message)));
 });
-sub.subscribe('insert');
