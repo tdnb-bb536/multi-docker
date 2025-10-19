@@ -1,0 +1,23 @@
+language: generic
+
+sudo: required
+
+services:
+    - docker
+
+before_install:
+    - docker build -t tdnbbb536/react-test -f ./client/Dockerfile.dev ./client # test only client project here
+    # - docker build -t myothertest  # client以外もtestしたい場合はここに行を追加する
+
+scripts:
+    - docker run -e CI=true tdnbbb536/react-test npm test
+    # - docker run othertest # client以外もtestしたい場合はここに行を追加する
+
+after_success:
+    - docker build -t tdnbbb536/multi-client ./client
+    - docker build -t tdnbbb536/multi-nginx ./nginx
+    - docker build -t tdnbbb536/multi-server ./server
+    - docker build -t tdnbbb536/multi-worker ./worker
+
+
+  
