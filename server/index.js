@@ -7,7 +7,7 @@ const cors = require('cors');
 
 const app = express();
 app.use(cors());
-app.use(bodyParser.json()); // Change data to json format from POST method
+app.use(bodyParser.json()); // Change data to json format from POST method.
 
 // Postgres Client Setup
 const { Pool } = require('pg');
