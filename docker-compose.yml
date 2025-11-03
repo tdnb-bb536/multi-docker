@@ -1,52 +1,31 @@
-version: '3'
+version: "3"
 services:
-    postgres:
-        image: "postgres:latest"
-        environment:
-            - POSTGRES_PASSWORD=postgres_password # これは設定必須の環境変数（Dockerhubのpostgresイメージのマニュアルを読む）
-    redis:
-        image: "redis:latest"
-    nginx:
-        depends_on:
-            - client
-            - api
-        restart: always
-        build:
-            dockerfile: Dockerfile.dev
-            context: ./nginx
-        ports:
-            - '3050:80' # 80 is a port inside container, 3050 is a port outside container
-    api:
-        build:
-            dockerfile: Dockerfile.dev
-            context: ./server
-        volumes:
-            - /app/node_modules
-            - ./server:/app
-        environment:
-            - REDIS_HOST=redis # service名をそのまま書けば起動したpostgresにアクセスできる
-            - REDIS_PORT=6379 # redisで指定されるデフォルトポート
-            - PGUSER=postgres # postgresのuser名で何でもいい
-            - PGHOST=postgres # service名をそのまま書けば起動したpostgresにアクセスできる
-            - PGDATABASE=postgres # DBの名前で何でもいい
-            - PGPASSWORD=postgres_password # DBにアクセスするパスワードで何でもいい
-            - PGPORT=5432 # postgresで指定されるデフォルトポート
-    client:
-        build:
-            dockerfile: Dockerfile.dev
-            context: ./client
-        volumes:
-            - /app/node_modules
-            - ./client:/app
-        environment: # this command is for React error for websocket, this will not be needed after React bug is fixed. 
-            - WDS_SOCKET_PORT=0
-    worker:
-        build:
-            dockerfile: Dockerfile.dev
-            context: ./worker
-        volumes:
-            - /app/node_modules
-            - ./worker:/app
-        environment:
-            - REDIS_HOST=redis
-            - REDIS_PORT=6379
+  client:
+    image: "tdnbbb536/multi-client"
+    mem_limit: 128m
+    hostname: client
+  server:
+    image: "tdnbbb536/multi-server"
+    mem_limit: 128m
+    hostname: api
+    environment:
+      - REDIS_HOST=$REDIS_HOST
+      - REDIS_PORT=$REDIS_PORT
+      - PGUSER=$PGUSER
+      - PGHOST=$PGHOST
+      - PGDATABASE=$PGDATABASE
+      - PGPASSWORD=$PGPASSWORD
+      - PGPORT=$PGPORT
+  worker:
+    image: "tdnbbb536/multi-worker"
+    mem_limit: 128m
+    hostname: worker
+    environment:
+      - REDIS_HOST=$REDIS_HOST
+      - REDIS_PORT=$REDIS_PORT
+  nginx:
+    image: "tdnbbb536/multi-nginx"
+    mem_limit: 128m
+    hostname: nginx
+    ports:
+      - "80:80"
