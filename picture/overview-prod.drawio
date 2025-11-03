@@ -1,0 +1,78 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.2.8 Chrome/140.0.7339.240 Electron/38.4.0 Safari/537.36" version="28.2.8">
+  <diagram name="ページ1" id="II2tZnJf5AY2gPtVraXT">
+    <mxGraphModel dx="1188" dy="955" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="WCxp9jelA8nPWTNHYdRx-1" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#A1A1A1;" vertex="1" parent="1">
+          <mxGeometry x="190" y="290" width="330" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="7cMS8DYF0GJ8WoQaO69P-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="7cMS8DYF0GJ8WoQaO69P-1" target="7cMS8DYF0GJ8WoQaO69P-2" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7cMS8DYF0GJ8WoQaO69P-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="7cMS8DYF0GJ8WoQaO69P-1" target="7cMS8DYF0GJ8WoQaO69P-3" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="265" y="335" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7cMS8DYF0GJ8WoQaO69P-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="7cMS8DYF0GJ8WoQaO69P-1" target="7cMS8DYF0GJ8WoQaO69P-14" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7cMS8DYF0GJ8WoQaO69P-1" value="Nginx&lt;div&gt;/&lt;/div&gt;&lt;div&gt;/api&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="210" y="400" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="7cMS8DYF0GJ8WoQaO69P-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="7cMS8DYF0GJ8WoQaO69P-2" target="7cMS8DYF0GJ8WoQaO69P-4" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7cMS8DYF0GJ8WoQaO69P-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="7cMS8DYF0GJ8WoQaO69P-2" target="7cMS8DYF0GJ8WoQaO69P-5" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7cMS8DYF0GJ8WoQaO69P-2" value="Express Server&lt;div&gt;(Backend)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="380" y="400" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="7cMS8DYF0GJ8WoQaO69P-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="7cMS8DYF0GJ8WoQaO69P-3" target="7cMS8DYF0GJ8WoQaO69P-2" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7cMS8DYF0GJ8WoQaO69P-3" value="React Server&lt;div&gt;(Frontend)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="280" y="310" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="7cMS8DYF0GJ8WoQaO69P-4" value="Redis" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="560" y="400" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="7cMS8DYF0GJ8WoQaO69P-5" value="Postgres" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="560" y="490" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="7cMS8DYF0GJ8WoQaO69P-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="7cMS8DYF0GJ8WoQaO69P-6" target="7cMS8DYF0GJ8WoQaO69P-4" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="615" y="335" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7cMS8DYF0GJ8WoQaO69P-6" value="Worker process&lt;div&gt;(Backend)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="400" y="310" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="7cMS8DYF0GJ8WoQaO69P-14" value="Browser&lt;div&gt;(User)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="100" y="400" width="70" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="7cMS8DYF0GJ8WoQaO69P-16" value="Elastic Beanstalk Instance" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="280" y="260" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="7cMS8DYF0GJ8WoQaO69P-17" value="AWS Relational&lt;div&gt;Database Service (RDS)&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="560" y="540" width="150" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="7cMS8DYF0GJ8WoQaO69P-18" value="AWS Elastic Cache" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="560" y="440" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="7cMS8DYF0GJ8WoQaO69P-19" value="Userはフィボナッチを計算するためのIndex値を一つ指定する" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="80" y="470" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="7cMS8DYF0GJ8WoQaO69P-20" value="Producitionバージョン&lt;div&gt;DBを外に出している&lt;/div&gt;&lt;div&gt;AWSにはオートスケールなどの便利なDBの機能があるため&lt;/div&gt;&lt;div&gt;セキュリティについてもAWSのDBは安全&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#a0522d;strokeColor=#6D1F00;fontColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="90" y="170" width="350" height="70" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
